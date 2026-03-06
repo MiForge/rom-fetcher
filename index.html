@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiaomi ROM Fetcher</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero-wrap">
+  <div class="hero-inner">
+    <div class="brand">
+      <div class="bico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="bname">Xiaomi <em>ROM</em> Fetcher</div>
+    </div>
+    <p class="hero-sub">Enter a device codename to find and download firmware</p>
+    <div class="s-wrap">
+      <div class="sbox" id="sbox">
+        <div class="s-ico"><svg viewBox="0 0 20 20"><path d="M8 4a4 4 0 100 8A4 4 0 008 4zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/></svg></div>
+        <input id="sInput" type="text" autocomplete="off" autocorrect="off" spellcheck="false"
+          placeholder="e.g. garnet, spes, moon…"
+          onfocus="openDrop()" oninput="onInput()" onkeydown="onKey(event)">
+        <button class="s-clr" id="sClr" type="button" onclick="clearSearch()">×</button>
+      </div>
+      <div class="sdrop" id="sdrop">
+        <div class="d-load" id="dLoad"><div class="sp-sm"></div>Loading device list…</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main"><div id="wiz"></div></main>
+<div id="toast"><span class="t-dot"></span><span id="tTxt"></span></div>
+
+<script src="app.js"></script>
+</body>
+</html>
